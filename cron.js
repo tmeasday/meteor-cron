@@ -1,7 +1,7 @@
 // Veeeeeeery simple cron job singleton
 // ticks every 1 minute, set a job to go every X ticks.
 
-var Cron = function(interval) {
+Cron = function(interval) {
   var self = this;
   
   interval = interval || 60 * 1000;
