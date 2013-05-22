@@ -3,7 +3,7 @@
   "description": "An extremely simple cron job",
   "homepage": "https://github.com/tmeasday/meteor-cron",
   "author": "Tom Coleman <tom@thesnail.org>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "git": "https://github.com/tmeasday/meteor-cron.git",
   "packages": {}
 }
