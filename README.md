@@ -27,6 +27,27 @@ You can also schedule jobs trigger based on timing. You should note that if the 
   });
 ```
 
+You can also use this trick to create something amazing.
+
+```js
+  var MyCron = new Cron(100);
+
+  //Get the current unix time in seconds
+  var ts = Math.round((new Date()).getTime() / 1000);
+
+  var recur = function() {
+
+  	var ts = Math.round((new Date()).getTime() / 1000);
+
+  	var ran = Math.round(Math.random()*10)
+
+  	console.log('schedule tick. I will get called again in ' + ran + ' second(s)');
+
+  	MyCron.addScheduleJob(ts + ran, recur);
+  };
+  recur();
+```
+
 ## Install
 
 Use [meteorite](http://oortcloud.github.com/meteorite/):
