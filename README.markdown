@@ -34,6 +34,6 @@ Use [meteorite](http://oortcloud.github.com/meteorite/):
 Then add via:
 
 ```bash
-mrt add cron
+mrt add cron-tick
 ```
 

@@ -1,5 +1,5 @@
 {
-  "name": "cron",
+  "name": "cron-tick",
   "description": "An extremely simple cron job",
   "homepage": "https://github.com/tmeasday/meteor-cron",
   "author": "Tom Coleman <tom@thesnail.org>",
