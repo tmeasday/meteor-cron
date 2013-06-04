@@ -13,6 +13,20 @@ Adds a simple cron interface to meteor. I'm fairly sure there is a better way to
   });
 ```
 
+You can also schedule jobs trigger based on timing. You should note that if the time that you schedule happens before a tick it will get delayed until the tick happens.
+
+```js
+  var MyCron = new Cron(1000);
+
+  //Get the current unix time in seconds
+  var ts = Math.round((new Date()).getTime() / 1000);
+
+  //This job will get called once after 5 second
+  MyCron.addScheduleJob(ts + 5, function() {
+  	console.log('schedule tick');
+  });
+```
+
 ## Install
 
 Use [meteorite](http://oortcloud.github.com/meteorite/):
