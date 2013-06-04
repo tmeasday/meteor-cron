@@ -35,16 +35,22 @@ You can also use this trick to create something amazing.
   //Get the current unix time in seconds
   var ts = Math.round((new Date()).getTime() / 1000);
 
+  //The recursive function
   var recur = function() {
 
+  	//Get the current unix time in seconds
   	var ts = Math.round((new Date()).getTime() / 1000);
 
+  	//Getting a random number
   	var ran = Math.round(Math.random()*10)
 
   	console.log('schedule tick. I will get called again in ' + ran + ' second(s)');
 
+  	//Create a new schedule before the old one gets deleted
   	MyCron.addScheduleJob(ts + ran, recur);
   };
+
+  //Call the recursive function for the first time
   recur();
 ```
 
