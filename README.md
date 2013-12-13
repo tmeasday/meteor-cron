@@ -5,9 +5,9 @@
 Adds a simple cron interface to meteor. I'm fairly sure there is a better way to do this, but this works.
 
 ```js
-  var MyCron = new Cron();
+  var MyCron = new Cron(/* interval in milliseconds, defaults to 60000 (1 minute) */);
   
-  // this job will happen every 1 second
+  // number of times the job happens, so this job will happen once every minute
   MyCron.addJob(1, function() {
     console.log('tick');
   });
