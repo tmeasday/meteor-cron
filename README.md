@@ -1,19 +1,23 @@
-# Cron
+# cron-tick
 
 ## Use
 
-Adds a simple cron interface to meteor. I'm fairly sure there is a better way to do this, but this works.
+Adds a very simple cron-like mechanism to meteor. I'm fairly sure there 
+s a better way to do this, but this works.
 
 ```js
   var MyCron = new Cron(/* interval in milliseconds, defaults to 60000 (1 minute) */);
   
-  // number of times the job happens, so this job will happen once every minute
-  MyCron.addJob(1, function() {
+  // 5 is the number of intervals between invoking the job
+  // so this job will happen once every 5 minute
+  MyCron.addJob(5, function() {
     console.log('tick');
   });
 ```
 
-You can also schedule jobs trigger based on timing. You should note that if the time that you schedule happens before a tick it will get delayed until the tick happens.
+The job will be called first after the specified number of intervals has passed.
+
+You can also schedule jobs to trigger based on timing. You should note that if the time that you schedule happens before a tick it will get delayed until the tick happens.
 
 ```js
   var MyCron = new Cron(1000);
