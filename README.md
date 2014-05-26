@@ -1,5 +1,7 @@
 # cron-tick
 
+**NOTE**: This package is very simple and rudimentary. For a more robust solution, please see: https://github.com/percolatestudio/meteor-synced-cron
+
 ## Use
 
 Adds a very simple cron-like mechanism to meteor. I'm fairly sure there 
